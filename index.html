@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saurabh Namdev - Portfolio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#0066FF',
+secondary: '#00D1FF'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body { font-family: 'Inter', sans-serif; }
+.gradient-bg {
+background: linear-gradient(135deg, #f6f8ff 0%, #ffffff 100%);
+}
+.skill-card:hover {
+transform: translateY(-5px);
+transition: all 0.3s ease;
+}
+@media (max-width: 640px) {
+.skill-card:hover {
+transform: none;
+}
+h1 {
+font-size: 2rem;
+}
+h2 {
+font-size: 1.5rem;
+}
+.contact-section {
+padding: 2rem 1rem;
+}
+}
+@media (max-width: 768px) {
+.project-card {
+margin-bottom: 2rem;
+}
+}
+</style>
+</head>
+<body class="gradient-bg min-h-screen">
+<nav class="fixed w-full bg-white/80 backdrop-blur-sm z-50 border-b border-gray-100">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16 items-center">
+<div class="text-2xl font-bold text-primary">SN</div>
+<div class="hidden md:flex space-x-8">
+<a href="#about" class="text-gray-600 hover:text-primary">About</a>
+<a href="#skills" class="text-gray-600 hover:text-primary">Skills</a>
+<a href="#projects" class="text-gray-600 hover:text-primary">Projects</a>
+<a href="#experience" class="text-gray-600 hover:text-primary">Experience</a>
+<a href="#contact" class="text-gray-600 hover:text-primary">Contact</a>
+</div>
+<button class="hidden md:block bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90">Resume</button>
+<button class="md:hidden text-gray-600" id="mobileMenuBtn">
+<i class="ri-menu-line text-2xl"></i>
+</button>
+<div id="mobileMenu" class="hidden fixed inset-0 bg-white z-50">
+<div class="flex justify-end p-4">
+<button class="text-gray-600" id="closeMenuBtn">
+<i class="ri-close-line text-2xl"></i>
+</button>
+</div>
+<div class="flex flex-col items-center space-y-8 pt-16">
+<a href="#about" class="text-gray-600 hover:text-primary text-xl">About</a>
+<a href="#skills" class="text-gray-600 hover:text-primary text-xl">Skills</a>
+<a href="#projects" class="text-gray-600 hover:text-primary text-xl">Projects</a>
+<a href="#experience" class="text-gray-600 hover:text-primary text-xl">Experience</a>
+<a href="#contact" class="text-gray-600 hover:text-primary text-xl">Contact</a>
+<button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90">Resume</button>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-16">
+<section id="about" class="py-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row items-center gap-12 px-4 sm:px-0">
+<div class="w-full sm:w-1/2">
+<img src="myphoto.jpg"
+alt="Saurabh Namdev"
+class="rounded-full w-64 h-64 object-cover mx-auto shadow-xl">
+</div>
+<div class="w-full sm:w-1/2">
+<h1 class="text-4xl font-bold mb-4">Saurabh Namdev</h1>
+<h2 class="text-2xl text-gray-600 mb-6">Software Developer</h2>
+<p class="text-gray-700 leading-relaxed mb-8">
+Hi, I'm Saurabh Namdev, a passionate software developer who loves building innovative and user-friendly applications. I enjoy creating seamless digital experiences, working with IoT and embedded systems, and solving real-world problems through technology. My journey is driven by curiosity, creativity, and a constant desire to learn and grow.
+</p>
+<div class="flex gap-4">
+<a href="#contact" class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-primary/90 cursor-pointer whitespace-nowrap">
+Contact Me
+</a>
+<a href="#projects" class="border-2 border-primary text-primary px-8 py-3 !rounded-button hover:bg-primary/5 cursor-pointer whitespace-nowrap">
+View Projects
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="skills" class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center mb-16">Skills & Expertise</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-0">
+<div class="skill-card bg-white p-8 rounded-lg shadow-lg">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-6">
+<i class="ri-code-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Frontend Development</h3>
+<ul class="space-y-2">
+<li class="flex items-center gap-2">
+<i class="ri-checkbox-circle-line text-primary"></i>
+HTML, CSS, JavaScript
+</li>
+<li class="flex items-center gap-2">
+<i class="ri-checkbox-circle-line text-primary"></i>
+React
+</li>
+</ul>
+</div>
+<div class="skill-card bg-white p-8 rounded-lg shadow-lg">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-6">
+<i class="ri-terminal-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Backend Development</h3>
+<ul class="space-y-2">
+<li class="flex items-center gap-2">
+<i class="ri-checkbox-circle-line text-primary"></i>
+Java, C++, Python
+</li>
+<li class="flex items-center gap-2">
+<i class="ri-checkbox-circle-line text-primary"></i>
+SQL
+</li>
+</ul>
+</div>
+<div class="skill-card bg-white p-8 rounded-lg shadow-lg">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-6">
+<i class="ri-cpu-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">IoT & Embedded Systems</h3>
+<ul class="space-y-2">
+<li class="flex items-center gap-2">
+<i class="ri-checkbox-circle-line text-primary"></i>
+Arduino, Raspberry Pi
+</li>
+<li class="flex items-center gap-2">
+<i class="ri-checkbox-circle-line text-primary"></i>
+Sensors & Actuators
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="projects" class="py-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center mb-16">Featured Projects</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-0">
+<div class="bg-white p-8 rounded-lg shadow-lg">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-6">
+<i class="ri-face-recognition-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Facial Recognition ATM Security System</h3>
+<p class="text-gray-600 mb-6">Developed a secure authentication system integrating facial recognition, biometric scanning, and cryptographic security.</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Python</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">OpenCV</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Cryptography</span>
+</div>
+<a href="#" class="text-primary hover:text-primary/80 flex items-center gap-2">
+View Project <i class="ri-arrow-right-line"></i>
+</a>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-lg">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-6">
+<i class="ri-lock-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">IoT-Based Smart Lock System</h3>
+<p class="text-gray-600 mb-6">Designed an Arduino-powered smart lock with encryption and secure access control.</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Arduino</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">IoT</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Security</span>
+</div>
+<a href="#" class="text-primary hover:text-primary/80 flex items-center gap-2">
+View Project <i class="ri-arrow-right-line"></i>
+</a>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-lg">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-6">
+<i class="ri-database-2-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Student Management System</h3>
+<p class="text-gray-600 mb-6">Developed a console-based system to store, retrieve, and manage student data. Simplified student record management for small-scale institutions.</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">C++</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">File Handling</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">OOP</span>
+</div>
+<a href="#" class="text-primary hover:text-primary/80 flex items-center gap-2">
+View Project <i class="ri-arrow-right-line"></i>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section id="contact" class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center mb-16">Get In Touch</h2>
+<div class="flex flex-col sm:flex-row gap-12 px-4 sm:px-0">
+<div class="w-full sm:w-1/2">
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg">
+<i class="ri-mail-line text-primary text-2xl"></i>
+</div>
+<div>
+<h3 class="font-semibold">Email</h3>
+<a href="mailto:nsaurabh111@gmail.com" class="text-gray-600 hover:text-primary">nsaurabh111@gmail.com</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg">
+<i class="ri-linkedin-line text-primary text-2xl"></i>
+</div>
+<div>
+<h3 class="font-semibold">LinkedIn</h3>
+<a href="https://www.linkedin.com/in/saurabh-namdev-787a24251/" target="_blank" class="text-gray-600 hover:text-primary">Connect on LinkedIn</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg">
+<i class="ri-github-line text-primary text-2xl"></i>
+</div>
+<div>
+<h3 class="font-semibold">GitHub</h3>
+<a href="https://github.com/saurabh998117" target="_blank" class="text-gray-600 hover:text-primary">View GitHub Profile</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg">
+<i class="ri-code-line text-primary text-2xl"></i>
+</div>
+<div>
+<h3 class="font-semibold">LeetCode</h3>
+<a href="https://leetcode.com/u/nsaurabh111/" target="_blank" class="text-gray-600 hover:text-primary">View LeetCode Profile</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg">
+<i class="ri-terminal-box-line text-primary text-2xl"></i>
+</div>
+<div>
+<h3 class="font-semibold">HackerRank</h3>
+<a href="https://www.hackerrank.com/profile/nsaurabh111" target="_blank" class="text-gray-600 hover:text-primary">View HackerRank Profile</a>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full sm:w-1/2">
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+<input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+<input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+<textarea rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"></textarea>
+</div>
+<button type="submit" class="w-full bg-primary text-white px-6 py-3 !rounded-button hover:bg-primary/90">
+Send Message
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-gray-50 py-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600">
+<p>© 2025 Saurabh Namdev. All rights reserved.</p>
+</div>
+</footer>
+<script>
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const closeMenuBtn = document.getElementById('closeMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+function toggleMenu() {
+mobileMenu.classList.toggle('hidden');
+document.body.classList.toggle('overflow-hidden');
+}
+mobileMenuBtn.addEventListener('click', toggleMenu);
+closeMenuBtn.addEventListener('click', toggleMenu);
+Array.from(mobileMenuLinks).forEach(link => {
+link.addEventListener('click', toggleMenu);
+});
+const form = document.querySelector('form');
+form.addEventListener('submit', (e) => {
+e.preventDefault();
+const formData = new FormData(form);
+const data = Object.fromEntries(formData);
+const notification = document.createElement('div');
+notification.className = 'fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform transition-transform duration-300 translate-y-0';
+notification.textContent = 'Message sent successfully!';
+document.body.appendChild(notification);
+setTimeout(() => {
+notification.style.transform = 'translateY(150%)';
+setTimeout(() => notification.remove(), 300);
+}, 3000);
+form.reset();
+});
+</script>
+</body>
+</html>
