@@ -74,6 +74,10 @@
           margin-bottom: 2rem;
         }
       }
+      .rounded-button {
+  border-radius: 12px; /* or your desired value */
+}
+
     </style>
   </head>
   <body class="gradient-bg min-h-screen">
@@ -98,13 +102,15 @@
               >Contact</a
             >
           </div>
-          <a
-            href="saurabh_Java.pdf"
-            target="_blank"
-            class="hidden md:block bg-primary text-white px-6 py-2 rounded hover:bg-primary/90"
-          >
-            View Resume
-          </a>
+        <a
+  href="saurabh_Java.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="hidden md:block bg-primary text-white px-6 py-2 rounded hover:bg-primary/90 transition duration-200"
+>
+  View Resume
+</a>
+
           <button class="md:hidden text-gray-600" id="mobileMenuBtn">
             <i class="ri-menu-line text-2xl"></i>
           </button>
