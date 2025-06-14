@@ -58,3 +58,44 @@ document.getElementById("feedback-button").addEventListener("click", function (e
         sendFeedback(param)
     }
 })
+ 
+  function toggleMenu() {
+    const menu = document.getElementById("mobile-menu");
+    const icon = document.getElementById("menu-icon");
+    menu.classList.toggle("hidden");
+
+    icon.classList.toggle("ri-menu-line");
+    icon.classList.toggle("ri-close-line");
+  }
+ 
+const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenuBtn = document.getElementById("closeMenuBtn");
+
+  mobileMenuBtn.addEventListener("click", () => {
+    mobileMenu.classList.add("active");
+  });
+
+  closeMenuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+  });
+// tailwind.config.js
+module.exports = {
+  content: [
+    "./src/**/*.{html,js}", // make sure this matches your project
+  ],
+  theme: {
+    extend: {
+      keyframes: {
+        'fade-in-up': {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
+      animation: {
+        'fade-in-up': 'fade-in-up 0.6s ease-out both',
+      },
+    },
+  },
+  plugins: [],
+}
